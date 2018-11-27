@@ -1,28 +1,5 @@
-# parcel-start-kit
+### 노마드 코더들은 어디에 사는가
 
-Setting up a professional project with Parcel as a code bundler.
-
-## Feater
-
-* ES6 with Bebel
-* SCSS
-* CSS Modules
-* Typography.js
-* Build for production
-
-
-## Git Clone
-
-```git clone https://github.com/sungkuk5420/parcel-start-kit.git```
-
-## NPM Install
-
-```npm install```
-
-## Start
-
-```npm start```
-
-## Build
-
-```npm run-script build```
+사용자 검색기능
+검색한 사용자 기반으로 도시표시
+도시의 거주 인원 수 표시
