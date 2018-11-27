@@ -349,13 +349,15 @@ map.on('load', function () {
 });
 
 map.on('click', 'clusters-label', function (e) {
-    console.log(e.features[0].geometry.coordinates);
-    map.flyTo({ center: e.features[0].geometry.coordinates });
+    console.log(e);
+    document.getElementById('searchtext').value = e.features[0].properties.name;
+    window.userfilter(e.features[0].properties.name);
+    map.flyTo({ center: e.features[0].properties.coordinates });
     // map.zoomTo(19, {duration: 1000});
 });
 
 var timer;
-window.userfilter = (keyword) => {
+window.userfilter = (keyword,cb) => {
     window.keyword = keyword.toUpperCase();
     console.log(keyword);
     if (timer) {
@@ -381,40 +383,46 @@ window.userfilter = (keyword) => {
                 element.style.display = 'none';
             }
         }
-        function onlyUnique(value, index, self) {
-            value = value.toUpperCase();
-            return self.indexOf(value) === index;
+        if(cb){
+            cb(usersData);
         }
-
-        // usage example:
-        var uniqueUsersData = usersData.map((user)=>user.area).filter( onlyUnique );
-        var usersAreas = uniqueUsersData;
-        console.log(usersAreas);
-        map.removeLayer('clusters-label');
-        var newFeatures = window.features.filter(function(currentArea) {
-            return usersAreas.includes(currentArea.properties.name.toString().toUpperCase());
-          }
-        );
-        console.log(newFeatures);
-        map.getSource('clusters').setData({
-            "type": "FeatureCollection",
-            "features": newFeatures
-        });
-        map.addLayer({
-            "id": "clusters-label",
-            "type": "symbol",
-            "source": "clusters",
-            "layout": {
-                "text-field": "{museum_count}",
-                "text-font": [
-                    "DIN Offc Pro Medium",
-                    "Arial Unicode MS Bold"
-                ],
-                "text-size": 16,
-                "icon-image": "cat",
-                "icon-size": 0.08
-            }
-        });
     }, 500);
 
+};
+
+window.makerReLoad = (usersData) => {
+    function onlyUnique(value, index, self) {
+        value = value.toUpperCase();
+        return self.indexOf(value) === index;
+    }
+
+    // usage example:
+    var uniqueUsersData = usersData.map((user) => user.area).filter(onlyUnique);
+    var usersAreas = uniqueUsersData;
+    console.log(usersAreas);
+    map.removeLayer('clusters-label');
+    var newFeatures = window.features.filter(function (currentArea) {
+        return usersAreas.includes(currentArea.properties.name.toString().toUpperCase());
+    }
+    );
+    console.log(newFeatures);
+    map.getSource('clusters').setData({
+        "type": "FeatureCollection",
+        "features": newFeatures
+    });
+    map.addLayer({
+        "id": "clusters-label",
+        "type": "symbol",
+        "source": "clusters",
+        "layout": {
+            "text-field": "{museum_count}",
+            "text-font": [
+                "DIN Offc Pro Medium",
+                "Arial Unicode MS Bold"
+            ],
+            "text-size": 16,
+            "icon-image": "cat",
+            "icon-size": 0.08
+        }
+    });
 };
