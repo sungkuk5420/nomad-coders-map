@@ -1,0 +1,386 @@
+* {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 14px;
+  }
+
+  html {
+    height: 100%;
+  }
+
+  body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  #map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 105%;
+  }
+
+  #sidebar {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 95%;
+    width: 380px;
+    background-color: rgba(0, 0, 0, 0.75);
+    overflow: hidden;
+  }
+
+  #userdescription {
+    display: none;
+    position: absolute;
+    left: 50px;
+    top: 100px;
+    vertical-align: middle;
+    height: 600px;
+    width: 570px;
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+
+  #avator {
+    position: absolute;
+    top: 50px;
+    /* 30px */
+    left: 30px;
+    width: 240px;
+    height: 240px;
+    background: url(./images/avator1.jpeg) -30px center;
+    background-size: cover;
+  }
+
+  #workername {
+    position: absolute;
+    /*top: 270px;
+    left: 30px;*/
+    top: 10px;
+    left: 30px;
+    width: 480px;
+    color: white;
+    font-size: 18px;
+    text-align: left;
+    /* center */
+    padding-top: 8px;
+  }
+
+  #attendance {
+    position: absolute;
+    top: 50px;
+    /* 30px */
+    left: 290px;
+    color: white;
+    font-family: monospace;
+    width: 250px;
+    dl {
+      display: table;
+    }
+    dd, dt {
+      display: table-cell;
+    }
+  }
+
+  #chart {
+    position: absolute;
+    width: 540px;
+    height: 170px;
+    top: 310px;
+    left: 20px;
+  }
+
+  #worktime, #worklocation {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    padding: 0.2em;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+  }
+
+  #placename {
+    font-size: 18px;
+    padding: 0.5em;
+    text-align: center;
+  }
+
+  .css-icon {
+    width: 0;
+    height: 0;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-left: 30px solid #ff8888;
+  }
+
+  .basestation {
+    color: white;
+    font-size: 14px;
+    display: block;
+    label {
+      cursor: pointer;
+      display: inline-block;
+      padding: 8px;
+      width: 300px;
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.15);
+      }
+    }
+  }
+
+  #basestationlist {
+    padding: 8px;
+  }
+
+  #timetable table {
+    color: white;
+    border-collapse: collapse;
+    border: none;
+    width: 100%;
+    margin-top: 0.5em;
+    tr:nth-child(odd) td {
+      background: rgba(255, 255, 255, 0.2);
+    }
+    td {
+      text-align: center;
+      padding: 0.25em;
+    }
+    th {
+      text-align: center;
+      padding: 0.25em;
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  #apptitle {
+    position: absolute;
+    top: 10px;
+    left: 25px;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 24px;
+  }
+
+  #logout {
+    display: none;
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    opacity: 0.5;
+  }
+
+  #loginusername {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    width: 200px;
+    text-align: right;
+    color: white;
+  }
+
+  #appsubtitle {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 16px;
+  }
+
+  #search {
+    position: absolute;
+    display: flex;
+    width: 380px;
+    height: 40px;
+    top: 40px;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    border: 1px solid rgba(0, 0, 0, 0.25);
+  }
+
+  span#searchbutton {
+    display: block;
+    cursor: pointer;
+    border-right: 1px solid rgba(255, 255, 255, 0.25);
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 11px 0 0 0;
+  }
+
+  #searchicon, #selecticon {
+    color: white;
+    font-size: 18px;
+  }
+
+  #basestationlist {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 0;
+    background-color: rgb(0, 0, 0);
+    /*min-width: 160px;*/
+    /*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
+    z-index: 1;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    width: 364px;
+  }
+
+  span {
+    &#filterarea {
+      /*display: inline-block;*/
+      display: block;
+      width: 40px;
+      height: 40px;
+      padding: 0;
+      margin: 0;
+      /*background-color: red;*/
+      &:hover #basestationlist {
+        display: block;
+      }
+    }
+    &#filterbasestation {
+      /*background-color: red;*/
+      display: block;
+      text-align: center;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      /*background: url("./images/basestationicon.png") no-repeat center center;*/
+      box-sizing: border-box;
+      padding: 11px 0 0 0px;
+    }
+    &#searchinput {
+      /*display: inline-block;*/
+      display: block;
+      margin: 0;
+      padding: 0;
+      width: 340px;
+      height: 45px;
+    }
+  }
+
+  input#searchtext {
+    background-color: rgba(255, 255, 255, 0.25);
+    border: none;
+    font-size: 18px;
+    padding-left: 8px;
+    height: 40px;
+    margin: 0;
+    color: white;
+    width: 340px;
+    box-sizing: border-box;
+  }
+
+  #filtericon {
+    color: white;
+    /* border: 1px solid rgba(255,255,255,0.5); */
+    font-size: 18px;
+  }
+
+  #searchtext::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.25);
+  }
+
+  #userlist {
+    position: absolute;
+    top: 90px;
+    right: 0px;
+    width: 366px;
+    height: 89%;
+    display: block;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 8px;
+    background-color: rgba(0, 0, 0, 0.75);
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #ddd;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #666;
+    }
+  }
+
+  .user {
+    display: table;
+    vertical-align: middle;
+    color: white;
+    padding: 0.25em 0.25em;
+    line-height: 1.5;
+    width: 100%;
+  }
+
+  .username {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 14px;
+    text-align: left;
+  }
+
+  .userimage {
+    display: table-cell;
+    padding-right: 0.5em;
+    width: 48px;
+    img{
+        border-radius: 50%;
+        border: 1px solid rgba(0, 0, 0, 0.25);
+        overflow: hidden;
+    }
+  }
+
+  .state {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+    width: 180px;
+  }
+
+  .online {
+    display: inline-block;
+    border: 1px solid rgb(204, 255, 19);
+    font-size: 12px;
+    padding: 0em 0.5em;
+    margin-right: 10px;
+    background-color: rgba(204, 255, 19, 0.5);
+    border-radius: 4px;
+  }
+
+  .working {
+    display: inline-block;
+    border: 1px solid rgb(46, 167, 224);
+    font-size: 12px;
+    margin-right: 10px;
+    padding: 0em 0.5em;
+    background-color: rgba(46, 167, 224, 0.5);
+    border-radius: 4px;
+  }
+
+  .offline {
+    display: inline-block;
+    font-size: 12px;
+    margin: 0 2em;
+  }
+
+  .sidebartitle {
+    background-color: black;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+  }
+
+  #closeballoon {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 48px;
+    height: 24px;
+    background-color: rgba(255, 255, 255, 0.25);
+    cursor: pointer;
+    img {
+      position: absolute;
+      top: 6px;
+      right: 18px;
+    }
+  }

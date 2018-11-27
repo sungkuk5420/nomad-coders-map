@@ -1,0 +1,420 @@
+
+mapboxgl.accessToken = 'pk.eyJ1Ijoic3VuZ2t1a2tpbSIsImEiOiJjamR3ZTM1OTUwNXY0MnFtb2E0OG04c2lpIn0.nNFmA7VqzxH3lTST9fiK4g';
+
+var map = new mapboxgl.Map({
+    container: 'map',
+    //   style: 'mapbox://styles/mapbox/streets-v8',
+    //   style: 'mapbox://styles/mapbox/satellite-v9',
+    //   style: 'mapbox://styles/mapbox/outdoors-v10',
+    //   style: 'mapbox://styles/mapbox/light-v9',
+    //   style: 'mapbox://styles/mapbox/dark-v9',
+    //   style: 'mapbox://styles/mapbox/satellite-streets-v10',
+    style: 'mapbox://styles/mapbox/navigation-preview-day-v2',
+    //   style: 'mapbox://styles/mapbox/navigation-preview-night-v2',
+    //   style: 'mapbox://styles/mapbox/navigation-guidance-day-v2',
+    //   style: 'mapbox://styles/mapbox/navigation-guidance-night-v2',
+    center: [75.345276, 33.681379],
+    zoom: -10
+});
+
+
+window.features = [
+    {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [135.4776404, 34.6783987] // Japan Osaka
+        },
+        "properties": {
+            "museum_count": 1,
+            "name": 'Japan Osaka'
+        }
+    },
+    {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [139.5703054, 35.6732619] // Japan Tokyo
+        },
+        "properties": {
+            "museum_count": 7,
+            "name": 'Japan Tokyo'
+        }
+    },
+    {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-77.0846155, 38.8935755] // USA east
+        },
+        "properties": {
+            "museum_count": 5,
+            "name": 'USA east'
+        }
+    },
+    {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-122.4690145, 37.743036] // USA west
+        },
+        "properties": {
+            "museum_count": 2,
+            "name": 'USA west'
+        }
+    },
+    {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-104.6537497, 37.2582904] // USA
+        },
+        "properties": {
+            "museum_count": 6,
+            "name": 'USA'
+        }
+    },
+    {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [145.5768603, -16.8804789] // AUSTRAILIA Cairns
+        },
+        "properties": {
+            "museum_count": 1,
+            "name": 'AUSTRAILIA Cairns'
+        }
+    },
+    {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [150.6517949, -33.8479271] // AUSTRAILIA Sydney
+        },
+        "properties": {
+            "museum_count": 1,
+            "name": 'AUSTRAILIA Sydney'
+        }
+    },
+    {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [166.3286824, -40.4505851] // NEW ZEALAND
+        },
+        "properties": {
+            "museum_count": 1,
+            "name": 'NEW ZEALAND'
+        }
+    },
+    {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [166.3286824, 40.4505851] // CANADA MONTREAL
+        },
+        "properties": {
+            "museum_count": 1,
+            "name": 'CANADA MONTREAL'
+        }
+    },
+    {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-114.2142365, 51.0130333] // CANADA CALGARY
+        },
+        "properties": {
+            "museum_count": 1,
+            "name": 'CANADA CALGARY'
+        }
+    },
+    {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-113.707936, 54.6993425] // CANADA
+        },
+        "properties": {
+            "museum_count": 3,
+            "name": 'CANADA'
+        }
+    },
+    {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [17.0950436, 64.6236384] // EUROPE FINLAND
+        },
+        "properties": {
+            "museum_count": 1,
+            "name": 'EUROPE FINLAND'
+        }
+    },
+    {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [5.9699475, 51.0899841] // EUROPE GERMANY
+        },
+        "properties": {
+            "museum_count": 2,
+            "name": 'EUROPE GERMANY'
+        }
+    },
+    {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-2.434221, 46.1314438] // EUROPE FRANCE
+        },
+        "properties": {
+            "museum_count": 1,
+            "name": 'EUROPE FRANCE'
+        }
+    },
+    {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [30.6894055, 39.0015493] // EUROPE TURKEY
+        },
+        "properties": {
+            "museum_count": 1,
+            "name": 'EUROPE TURKEY'
+        }
+    },
+    {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [18.3839918, 47.1556942] // EUROPE HUNGARY
+        },
+        "properties": {
+            "museum_count": 1,
+            "name": 'EUROPE HUNGARY'
+        }
+    },
+    {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [22.2384469, 38.1245117] // EUROPE GREECE
+        },
+        "properties": {
+            "museum_count": 1,
+            "name": 'EUROPE GREECE'
+        }
+    },
+    {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [118.1266689, 11.6628405] // PHILLIPINES
+        },
+        "properties": {
+            "museum_count": 2,
+            "name": 'PHILLIPINES'
+        }
+    },
+    {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [96.9951987, 13.0003506] // THAILAND
+        },
+        "properties": {
+            "museum_count": 2,
+            "name": 'THAILAND'
+        }
+    },
+    {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [73.7315375, 20.750644] // INDIA
+        },
+        "properties": {
+            "museum_count": 1,
+            "name": 'INDIA'
+        }
+    },
+    {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [15.1224051, 4.127938] // MALAYSIA
+        },
+        "properties": {
+            "museum_count": 1,
+            "name": 'MALAYSIA'
+        }
+    },
+    {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-111.6373655, 23.294194] // AMERICA MEXICO
+        },
+        "properties": {
+            "museum_count": 1,
+            "name": 'AMERICA MEXICO'
+        }
+    },
+    {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-0.2147489, 5.5912077] // AFRICA GHANA (Acra)
+        },
+        "properties": {
+            "museum_count": 1,
+            "name": 'AFRICA GHANA (Acra)'
+        }
+    },
+    {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-9.3938589, 31.7811669] // AFRICA MOROCCO
+        },
+        "properties": {
+            "museum_count": 1,
+            "name": 'AFRICA MOROCCO'
+        }
+    },
+    {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [40.5813355, 24.0133287] // SAUDI ARABIA
+        },
+        "properties": {
+            "museum_count": 1,
+            "name": 'SAUDI ARABIA'
+        }
+    },
+    {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.1172816, 39.9385466] // China Beijing
+        },
+        "properties": {
+            "museum_count": 1,
+            "name": 'China Beijing'
+        }
+    },
+    {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [22.2384469, 38.1245117] // EUROPE GREECE
+        },
+        "properties": {
+            "museum_count": 1,
+            "name": 'EUROPE GREECE'
+        }
+    }
+];
+map.on('load', function () {
+    map.loadImage('https://cdn1.iconfinder.com/data/icons/clean-simple/75/iconlocation-12-512.png', function (error, image) {
+        //   map.loadImage('https://cdn4.iconfinder.com/data/icons/superuser-web-kit/512/674020-point-of-interest_interest_point_venue_spot_place_location_site-512.png', function(error, image) {
+        if (error) throw error;
+        map.addImage('cat', image);
+        map.addSource('clusters', {
+            type: "geojson",
+            data: {
+                "type": "FeatureCollection",
+                "features": window.features
+            }
+        });
+
+        map.addLayer({
+            "id": "clusters-label",
+            "type": "symbol",
+            "source": "clusters",
+            "layout": {
+                "text-field": "{museum_count}",
+                "text-font": [
+                    "DIN Offc Pro Medium",
+                    "Arial Unicode MS Bold"
+                ],
+                "text-size": 16,
+                "icon-image": "cat",
+                "icon-size": 0.08
+            }
+        });
+    });
+});
+
+map.on('click', 'clusters-label', function (e) {
+    console.log(e.features[0].geometry.coordinates);
+    map.flyTo({ center: e.features[0].geometry.coordinates });
+    // map.zoomTo(19, {duration: 1000});
+});
+
+var timer;
+window.userfilter = (keyword) => {
+    window.keyword = keyword.toUpperCase();
+    console.log(keyword);
+    if (timer) {
+        clearTimeout(timer);
+    }
+    timer = setTimeout(function () {
+        var users = document.querySelectorAll('.user');
+        console.log(users);
+        var usersData = [];
+        for (let i = 0; i < users.length; i++) {
+            var element = users[i];
+            var userName = element.querySelectorAll('.username')[0].textContent.toUpperCase();
+            var area = element.querySelectorAll('.area')[0].textContent.toUpperCase();
+            var keyword = window.keyword;
+            if ((userName.indexOf(keyword) !== -1)
+                || (area.indexOf(keyword) !== -1)) {
+                element.style.display = 'table';
+                usersData.push({
+                    name: userName,
+                    area
+                });
+            } else {
+                element.style.display = 'none';
+            }
+        }
+        function onlyUnique(value, index, self) {
+            value = value.toUpperCase();
+            return self.indexOf(value) === index;
+        }
+
+        // usage example:
+        var uniqueUsersData = usersData.map((user)=>user.area).filter( onlyUnique );
+        var usersAreas = uniqueUsersData;
+        console.log(usersAreas);
+        map.removeLayer('clusters-label');
+        var newFeatures = window.features.filter(function(currentArea) {
+            return usersAreas.includes(currentArea.properties.name.toString().toUpperCase());
+          }
+        );
+        console.log(newFeatures);
+        map.getSource('clusters').setData({
+            "type": "FeatureCollection",
+            "features": newFeatures
+        });
+        map.addLayer({
+            "id": "clusters-label",
+            "type": "symbol",
+            "source": "clusters",
+            "layout": {
+                "text-field": "{museum_count}",
+                "text-font": [
+                    "DIN Offc Pro Medium",
+                    "Arial Unicode MS Bold"
+                ],
+                "text-size": 16,
+                "icon-image": "cat",
+                "icon-size": 0.08
+            }
+        });
+    }, 500);
+
+};

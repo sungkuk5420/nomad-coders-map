@@ -1,0 +1,32 @@
+{
+  "name": "parcel-start-kit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sungkuk5420/parcel-start-kit.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sungkuk5420/parcel-start-kit/issues"
+  },
+  "homepage": "https://github.com/sungkuk5420/parcel-start-kit#readme",
+  "dependencies": {
+    "babel-preset-env": "^1.7.0",
+    "node-sass": "^4.10.0",
+    "parcel": "^1.10.3",
+    "parcel-bundler": "^1.10.3",
+    "postcss-custom-properties": "^8.0.8",
+    "postcss-modules": "^1.4.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "custom-properties": "^1.0.1"
+  },
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html -d build --public-url ./"
+  }
+}
