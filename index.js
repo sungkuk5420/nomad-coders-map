@@ -13,8 +13,8 @@ var map = new mapboxgl.Map({
     //   style: 'mapbox://styles/mapbox/navigation-preview-night-v2',
     //   style: 'mapbox://styles/mapbox/navigation-guidance-day-v2',
     //   style: 'mapbox://styles/mapbox/navigation-guidance-night-v2',
-    center: [75.345276, 33.681379],
-    zoom: -10
+    center: [55.345276, 20.681379],
+    zoom: 2
 });
 
 
@@ -111,7 +111,7 @@ window.features = [
         "type": "Feature",
         "geometry": {
             "type": "Point",
-            "coordinates": [166.3286824, 40.4505851] // CANADA MONTREAL
+            "coordinates": [-73.8703841,45.5579564] // CANADA MONTREAL
         },
         "properties": {
             "museum_count": 1,
@@ -133,11 +133,22 @@ window.features = [
         "type": "Feature",
         "geometry": {
             "type": "Point",
-            "coordinates": [-113.707936, 54.6993425] // CANADA
+            "coordinates": [-102.9887805,57.0882106] // CANADA
         },
         "properties": {
             "museum_count": 3,
             "name": 'CANADA'
+        }
+    },
+    {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-79.4578006,43.6430078] // CANADA TORONTO
+        },
+        "properties": {
+            "museum_count": 1,
+            "name": 'CANADA TORONTO'
         }
     },
     {
@@ -340,6 +351,8 @@ map.on('load', function () {
                     "DIN Offc Pro Medium",
                     "Arial Unicode MS Bold"
                 ],
+                "icon-allow-overlap":true,
+                "icon-ignore-placement": true,
                 "text-size": 16,
                 "icon-image": "cat",
                 "icon-size": 0.08
@@ -420,6 +433,8 @@ window.makerReLoad = (usersData) => {
                 "DIN Offc Pro Medium",
                 "Arial Unicode MS Bold"
             ],
+            "icon-allow-overlap":true,
+            "icon-ignore-placement": true,
             "text-size": 16,
             "icon-image": "cat",
             "icon-size": 0.08
