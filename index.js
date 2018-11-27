@@ -14,7 +14,7 @@ var map = new mapboxgl.Map({
     //   style: 'mapbox://styles/mapbox/navigation-guidance-day-v2',
     //   style: 'mapbox://styles/mapbox/navigation-guidance-night-v2',
     center: [55.345276, 20.681379],
-    zoom: 2
+    zoom: 1.5
 });
 
 
