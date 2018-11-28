@@ -13,8 +13,16 @@ var map = new mapboxgl.Map({
     //   style: 'mapbox://styles/mapbox/navigation-preview-night-v2',
     //   style: 'mapbox://styles/mapbox/navigation-guidance-day-v2',
     //   style: 'mapbox://styles/mapbox/navigation-guidance-night-v2',
+    // center: [139.691298,35.6691074],
     center: [55.345276, 20.681379],
     zoom: 1.5
+    // zoom: 7
+});
+
+
+map.on('mousemove', function (e) {
+    console.log(JSON.stringify(e.point));
+    console.log(JSON.stringify(e.lngLat));
 });
 
 
@@ -34,7 +42,7 @@ window.features = [
         "type": "Feature",
         "geometry": {
             "type": "Point",
-            "coordinates": [139.5703054, 35.6732619] // Japan Tokyo
+            "coordinates": [139.75298,35.7091074] // Japan Tokyo
         },
         "properties": {
             "museum_count": 7,
@@ -48,7 +56,7 @@ window.features = [
             "coordinates": [-77.0846155, 38.8935755] // USA east
         },
         "properties": {
-            "museum_count": 5,
+            "museum_count": 4,
             "name": 'USA east'
         }
     },
@@ -56,7 +64,7 @@ window.features = [
         "type": "Feature",
         "geometry": {
             "type": "Point",
-            "coordinates": [-122.4690145, 37.743036] // USA west
+            "coordinates": [-119.63646607811285,37.62166841191262] // USA west
         },
         "properties": {
             "museum_count": 2,
@@ -71,7 +79,7 @@ window.features = [
         },
         "properties": {
             "museum_count": 6,
-            "name": 'USA'
+            "name": 'USA ect'
         }
     },
     {
@@ -100,7 +108,7 @@ window.features = [
         "type": "Feature",
         "geometry": {
             "type": "Point",
-            "coordinates": [166.3286824, -40.4505851] // NEW ZEALAND
+            "coordinates": [171.65902071988393,-43.339630362187066] // NEW ZEALAND
         },
         "properties": {
             "museum_count": 1,
@@ -155,7 +163,7 @@ window.features = [
         "type": "Feature",
         "geometry": {
             "type": "Point",
-            "coordinates": [17.0950436, 64.6236384] // EUROPE FINLAND
+            "coordinates": [26.479994411132992,63.30047989554316] // EUROPE FINLAND
         },
         "properties": {
             "museum_count": 1,
@@ -166,7 +174,7 @@ window.features = [
         "type": "Feature",
         "geometry": {
             "type": "Point",
-            "coordinates": [5.9699475, 51.0899841] // EUROPE GERMANY
+            "coordinates": [10.364291820486585,51.84189746515267] // EUROPE GERMANY
         },
         "properties": {
             "museum_count": 2,
@@ -177,7 +185,7 @@ window.features = [
         "type": "Feature",
         "geometry": {
             "type": "Point",
-            "coordinates": [-2.434221, 46.1314438] // EUROPE FRANCE
+            "coordinates": [2.380981070993272,48.760181558556326] // EUROPE FRANCE
         },
         "properties": {
             "museum_count": 1,
@@ -221,7 +229,7 @@ window.features = [
         "type": "Feature",
         "geometry": {
             "type": "Point",
-            "coordinates": [118.1266689, 11.6628405] // PHILLIPINES
+            "coordinates": [123.13219338267453,10.109205250718531] // PHILLIPINES
         },
         "properties": {
             "museum_count": 2,
@@ -232,7 +240,7 @@ window.features = [
         "type": "Feature",
         "geometry": {
             "type": "Point",
-            "coordinates": [96.9951987, 13.0003506] // THAILAND
+            "coordinates": [102.24431108128505,15.708253001501035] // THAILAND
         },
         "properties": {
             "museum_count": 2,
@@ -243,7 +251,7 @@ window.features = [
         "type": "Feature",
         "geometry": {
             "type": "Point",
-            "coordinates": [73.7315375, 20.750644] // INDIA
+            "coordinates": [78.42420521312602,23.562988640162445] // INDIA
         },
         "properties": {
             "museum_count": 1,
@@ -254,7 +262,7 @@ window.features = [
         "type": "Feature",
         "geometry": {
             "type": "Point",
-            "coordinates": [15.1224051, 4.127938] // MALAYSIA
+            "coordinates": [101.9916116369136,5.386435151993808] // MALAYSIA
         },
         "properties": {
             "museum_count": 1,
@@ -265,7 +273,7 @@ window.features = [
         "type": "Feature",
         "geometry": {
             "type": "Point",
-            "coordinates": [-111.6373655, 23.294194] // AMERICA MEXICO
+            "coordinates": [-102.41966036947927,24.99650323762758] // AMERICA MEXICO
         },
         "properties": {
             "museum_count": 1,
@@ -287,7 +295,7 @@ window.features = [
         "type": "Feature",
         "geometry": {
             "type": "Point",
-            "coordinates": [-9.3938589, 31.7811669] // AFRICA MOROCCO
+            "coordinates": [-6.017481373549742,32.97832278716733] // AFRICA MOROCCO
         },
         "properties": {
             "museum_count": 1,
