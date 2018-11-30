@@ -45,7 +45,7 @@ window.features = [
             "coordinates": [139.75298,35.7091074] // Japan Tokyo
         },
         "properties": {
-            "museum_count": 7,
+            "museum_count": 8,
             "name": 'Japan Tokyo'
         }
     },

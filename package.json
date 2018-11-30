@@ -26,7 +26,7 @@
     "custom-properties": "^1.0.1"
   },
   "scripts": {
-    "start": "parcel index.html",
-    "build": "parcel build index.html -d build --public-url ./"
+    "start": "parcel index-original.html",
+    "build": "parcel build index-original.html -d build --public-url ./"
   }
 }
