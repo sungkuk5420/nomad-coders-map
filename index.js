@@ -1,4 +1,3 @@
-
 mapboxgl.accessToken = 'pk.eyJ1Ijoic3VuZ2t1a2tpbSIsImEiOiJjamR3ZTM1OTUwNXY0MnFtb2E0OG04c2lpIn0.nNFmA7VqzxH3lTST9fiK4g';
 
 var map = new mapboxgl.Map({
@@ -26,8 +25,7 @@ map.on('mousemove', function (e) {
 });
 
 
-window.features = [
-    {
+window.features = [{
         "type": "Feature",
         "geometry": {
             "type": "Point",
@@ -42,7 +40,7 @@ window.features = [
         "type": "Feature",
         "geometry": {
             "type": "Point",
-            "coordinates": [139.75298,35.7091074] // Japan Tokyo
+            "coordinates": [139.75298, 35.7091074] // Japan Tokyo
         },
         "properties": {
             "museum_count": 8,
@@ -64,7 +62,7 @@ window.features = [
         "type": "Feature",
         "geometry": {
             "type": "Point",
-            "coordinates": [-119.63646607811285,37.62166841191262] // USA west
+            "coordinates": [-119.63646607811285, 37.62166841191262] // USA west
         },
         "properties": {
             "museum_count": 2,
@@ -108,7 +106,7 @@ window.features = [
         "type": "Feature",
         "geometry": {
             "type": "Point",
-            "coordinates": [171.65902071988393,-43.339630362187066] // NEW ZEALAND
+            "coordinates": [171.65902071988393, -43.339630362187066] // NEW ZEALAND
         },
         "properties": {
             "museum_count": 1,
@@ -119,7 +117,7 @@ window.features = [
         "type": "Feature",
         "geometry": {
             "type": "Point",
-            "coordinates": [-73.8703841,45.5579564] // CANADA MONTREAL
+            "coordinates": [-73.8703841, 45.5579564] // CANADA MONTREAL
         },
         "properties": {
             "museum_count": 1,
@@ -141,7 +139,7 @@ window.features = [
         "type": "Feature",
         "geometry": {
             "type": "Point",
-            "coordinates": [-102.9887805,57.0882106] // CANADA
+            "coordinates": [-102.9887805, 57.0882106] // CANADA
         },
         "properties": {
             "museum_count": 3,
@@ -152,7 +150,7 @@ window.features = [
         "type": "Feature",
         "geometry": {
             "type": "Point",
-            "coordinates": [-79.4578006,43.6430078] // CANADA TORONTO
+            "coordinates": [-79.4578006, 43.6430078] // CANADA TORONTO
         },
         "properties": {
             "museum_count": 1,
@@ -163,7 +161,7 @@ window.features = [
         "type": "Feature",
         "geometry": {
             "type": "Point",
-            "coordinates": [26.479994411132992,63.30047989554316] // EUROPE FINLAND
+            "coordinates": [26.479994411132992, 63.30047989554316] // EUROPE FINLAND
         },
         "properties": {
             "museum_count": 1,
@@ -174,7 +172,7 @@ window.features = [
         "type": "Feature",
         "geometry": {
             "type": "Point",
-            "coordinates": [10.364291820486585,51.84189746515267] // EUROPE GERMANY
+            "coordinates": [10.364291820486585, 51.84189746515267] // EUROPE GERMANY
         },
         "properties": {
             "museum_count": 2,
@@ -185,7 +183,7 @@ window.features = [
         "type": "Feature",
         "geometry": {
             "type": "Point",
-            "coordinates": [2.380981070993272,48.760181558556326] // EUROPE FRANCE
+            "coordinates": [2.380981070993272, 48.760181558556326] // EUROPE FRANCE
         },
         "properties": {
             "museum_count": 1,
@@ -229,7 +227,7 @@ window.features = [
         "type": "Feature",
         "geometry": {
             "type": "Point",
-            "coordinates": [123.13219338267453,10.109205250718531] // PHILLIPINES
+            "coordinates": [123.13219338267453, 10.109205250718531] // PHILLIPINES
         },
         "properties": {
             "museum_count": 2,
@@ -240,7 +238,7 @@ window.features = [
         "type": "Feature",
         "geometry": {
             "type": "Point",
-            "coordinates": [102.24431108128505,15.708253001501035] // THAILAND
+            "coordinates": [102.24431108128505, 15.708253001501035] // THAILAND
         },
         "properties": {
             "museum_count": 2,
@@ -251,7 +249,7 @@ window.features = [
         "type": "Feature",
         "geometry": {
             "type": "Point",
-            "coordinates": [78.42420521312602,23.562988640162445] // INDIA
+            "coordinates": [78.42420521312602, 23.562988640162445] // INDIA
         },
         "properties": {
             "museum_count": 1,
@@ -262,7 +260,7 @@ window.features = [
         "type": "Feature",
         "geometry": {
             "type": "Point",
-            "coordinates": [101.9916116369136,5.386435151993808] // MALAYSIA
+            "coordinates": [101.9916116369136, 5.386435151993808] // MALAYSIA
         },
         "properties": {
             "museum_count": 1,
@@ -273,7 +271,7 @@ window.features = [
         "type": "Feature",
         "geometry": {
             "type": "Point",
-            "coordinates": [-102.41966036947927,24.99650323762758] // AMERICA MEXICO
+            "coordinates": [-102.41966036947927, 24.99650323762758] // AMERICA MEXICO
         },
         "properties": {
             "museum_count": 1,
@@ -295,7 +293,7 @@ window.features = [
         "type": "Feature",
         "geometry": {
             "type": "Point",
-            "coordinates": [-6.017481373549742,32.97832278716733] // AFRICA MOROCCO
+            "coordinates": [-6.017481373549742, 32.97832278716733] // AFRICA MOROCCO
         },
         "properties": {
             "museum_count": 1,
@@ -359,7 +357,7 @@ map.on('load', function () {
                     "DIN Offc Pro Medium",
                     "Arial Unicode MS Bold"
                 ],
-                "icon-allow-overlap":true,
+                "icon-allow-overlap": true,
                 "icon-ignore-placement": true,
                 "text-size": 16,
                 "icon-image": "cat",
@@ -373,12 +371,27 @@ map.on('click', 'clusters-label', function (e) {
     console.log(e);
     document.getElementById('searchtext').value = e.features[0].properties.name;
     window.userfilter(e.features[0].properties.name);
-    map.flyTo({ center: e.features[0].properties.coordinates });
+    map.flyTo({
+        center: e.features[0].properties.coordinates
+    });
     // map.zoomTo(19, {duration: 1000});
 });
 
+var userListDOM = document.querySelectorAll('.user');
+for (var i = 0; i < userListDOM.length; i++) {
+    var currentUserDOM = userListDOM[i];
+    currentUserDOM.addEventListener('click', function () {
+        var userName = event.target.textContent;
+        document.getElementById('searchtext').value = userName;
+        window.userfilter(userName);
+    }, false);
+
+    // map.flyTo({ center: e.features[0].properties.coordinates });
+    // map.zoomTo(19, {duration: 1000});
+}
+
 var timer;
-window.userfilter = (keyword,cb) => {
+window.userfilter = (keyword, cb) => {
     window.keyword = keyword.toUpperCase();
     console.log(keyword);
     if (timer) {
@@ -390,11 +403,11 @@ window.userfilter = (keyword,cb) => {
         var usersData = [];
         for (let i = 0; i < users.length; i++) {
             var element = users[i];
-            var userName = element.querySelectorAll('.username')[0].textContent.toUpperCase();
-            var area = element.querySelectorAll('.area')[0].textContent.toUpperCase();
+            var userName = element.querySelector('.username').textContent.toUpperCase();
+            var area = element.querySelector('.area').textContent.toUpperCase();
             var keyword = window.keyword;
-            if ((userName.indexOf(keyword) !== -1)
-                || (area.indexOf(keyword) !== -1)) {
+            if ((userName.indexOf(keyword) !== -1) ||
+                (area.indexOf(keyword) !== -1)) {
                 element.style.display = 'table';
                 usersData.push({
                     name: userName,
@@ -404,7 +417,7 @@ window.userfilter = (keyword,cb) => {
                 element.style.display = 'none';
             }
         }
-        if(cb){
+        if (cb) {
             cb(usersData);
         }
     }, 500);
@@ -424,8 +437,7 @@ window.makerReLoad = (usersData) => {
     map.removeLayer('clusters-label');
     var newFeatures = window.features.filter(function (currentArea) {
         return usersAreas.includes(currentArea.properties.name.toString().toUpperCase());
-    }
-    );
+    });
     console.log(newFeatures);
     map.getSource('clusters').setData({
         "type": "FeatureCollection",
@@ -441,7 +453,7 @@ window.makerReLoad = (usersData) => {
                 "DIN Offc Pro Medium",
                 "Arial Unicode MS Bold"
             ],
-            "icon-allow-overlap":true,
+            "icon-allow-overlap": true,
             "icon-ignore-placement": true,
             "text-size": 16,
             "icon-image": "cat",

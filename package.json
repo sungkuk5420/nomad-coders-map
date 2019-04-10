@@ -5,14 +5,14 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sungkuk5420/parcel-start-kit.git"
+    "url": "git+https://github.com/sungkuk5420/nomad-coders-map.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/sungkuk5420/parcel-start-kit/issues"
+    "url": "https://github.com/sungkuk5420/nomad-coders-map/issues"
   },
-  "homepage": "https://github.com/sungkuk5420/parcel-start-kit#readme",
+  "homepage": "https://github.com/sungkuk5420/nomad-coders-map#readme",
   "dependencies": {
     "babel-preset-env": "^1.7.0",
     "node-sass": "^4.10.0",
@@ -23,10 +23,11 @@
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
-    "custom-properties": "^1.0.1"
+    "custom-properties": "^1.0.1",
+    "prettier": "^1.15.3"
   },
   "scripts": {
-    "start": "parcel index-original.html",
-    "build": "parcel build index-original.html -d build --public-url ./"
+    "start": "parcel index.html",
+    "build": "parcel build index.html -d build --public-url ./"
   }
 }
