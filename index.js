@@ -377,19 +377,6 @@ map.on('click', 'clusters-label', function (e) {
     // map.zoomTo(19, {duration: 1000});
 });
 
-var userListDOM = document.querySelectorAll('.user');
-for (var i = 0; i < userListDOM.length; i++) {
-    var currentUserDOM = userListDOM[i];
-    currentUserDOM.addEventListener('click', function () {
-        var userName = event.target.textContent;
-        document.getElementById('searchtext').value = userName;
-        window.userfilter(userName);
-    }, false);
-
-    // map.flyTo({ center: e.features[0].properties.coordinates });
-    // map.zoomTo(19, {duration: 1000});
-}
-
 var timer;
 window.userfilter = (keyword, cb) => {
     window.keyword = keyword.toUpperCase();
