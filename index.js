@@ -20,8 +20,8 @@ var map = new mapboxgl.Map({
 
 
 map.on('mousemove', function (e) {
-    console.log(JSON.stringify(e.point));
-    console.log(JSON.stringify(e.lngLat));
+    // console.log(JSON.stringify(e.point));
+    // console.log(JSON.stringify(e.lngLat));
 });
 
 
