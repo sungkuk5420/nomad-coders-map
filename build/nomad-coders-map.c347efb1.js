@@ -340,7 +340,7 @@ parcelRequire = function (e, r, n, t) {
                 name: "EUROPE GREECE"
             }
         }], r.on("load", function () {
-            r.loadImage("https://github.com/sungkuk5420/nomad-coders-map/blob/master/images/spot_black.png", function (e, t) {
+            r.loadImage("https://raw.githubusercontent.com/sungkuk5420/nomad-coders-map/master/images/spot_black.png", function (e, t) {
                 if (e) throw e;
                 r.addImage("cat", t), r.addSource("clusters", {
                     type: "geojson",
