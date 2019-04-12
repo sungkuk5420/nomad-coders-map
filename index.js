@@ -336,7 +336,7 @@ window.features = [{
     }
 ];
 map.on('load', function () {
-    map.loadImage('https://github.com/sungkuk5420/nomad-coders-map/blob/master/build/spot_black.png', function (error, image) {
+    map.loadImage('https://github.com/sungkuk5420/nomad-coders-map/blob/master/images/spot_black.png', function (error, image) {
         // map.loadImage(spotImage, function (error, image) {
         // map.loadImage('https://cdn1.iconfinder.com/data/icons/clean-simple/75/iconlocation-12-512.png', function (error, image) {
         //   map.loadImage('https://cdn4.iconfinder.com/data/icons/superuser-web-kit/512/674020-point-of-interest_interest_point_venue_spot_place_location_site-512.png', function(error, image) {
