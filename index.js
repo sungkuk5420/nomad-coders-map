@@ -388,14 +388,23 @@ window.userfilter = (keyword, cb) => {
         var users = document.querySelectorAll('.user');
         console.log(users);
         var usersData = [];
+        var firstBL = false;
+        if (document.querySelector('.first-row-div')) {
+            document.querySelector('.first-row-div').classList.remove('first-row-div');
+        }
         for (let i = 0; i < users.length; i++) {
             var element = users[i];
             var userName = element.querySelector('.username').textContent.toUpperCase();
-            var area = element.querySelector('.area').textContent.toUpperCase();
+            var area = element.querySelector('.area.tooltiptext').textContent.toUpperCase();
             var keyword = window.keyword;
             if ((userName.indexOf(keyword) !== -1) ||
                 (area.indexOf(keyword) !== -1)) {
                 element.style.display = 'table';
+                if (!firstBL) {
+                    console.log('first dom is ', userName);
+                    element.classList.add('first-row-div');
+                    firstBL = true;
+                }
                 usersData.push({
                     name: userName,
                     area
@@ -418,14 +427,13 @@ window.makerReLoad = (usersData) => {
     }
 
     // usage example:
-    var uniqueUsersData = usersData.map((user) => user.area).filter(onlyUnique);
-    var usersAreas = uniqueUsersData;
-    console.log(usersAreas);
+    // var uniqueUsersData = usersData.map((user) => user.area).filter(onlyUnique);
+    // var usersAreas = uniqueUsersData;
+    var usersAreas = usersData[0].area.split(',');
     map.removeLayer('clusters-label');
     var newFeatures = window.features.filter(function (currentArea) {
         return usersAreas.includes(currentArea.properties.name.toString().toUpperCase());
     });
-    console.log(newFeatures);
     map.getSource('clusters').setData({
         "type": "FeatureCollection",
         "features": newFeatures

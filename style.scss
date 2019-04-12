@@ -14,6 +14,10 @@ body {
   overflow: hidden;
 }
 
+.hide {
+  display: none;
+}
+
 #map {
   position: absolute;
   top: 0;
@@ -182,14 +186,17 @@ body {
 }
 
 #search {
-  position: absolute;
+  position: fixed;
+  display: -ms-flexbox;
   display: flex;
   width: 380px;
-  height: 40px;
+  height: 42px;
   top: 40px;
   right: 0;
   background-color: rgba(0, 0, 0, 0.75);
   border: 1px solid rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+  flex: none;
 }
 
 span#searchbutton {
@@ -282,10 +289,11 @@ input#searchtext {
 }
 
 #userlist {
-  position: absolute;
+  position: fixed;
+  overflow-x: hidden;
   top: 90px;
   right: 0px;
-  width: 366px;
+  width: 380px;
   height: 89%;
   display: block;
   border-top: 1px solid rgba(255, 255, 255, 0.25);
@@ -304,6 +312,14 @@ input#searchtext {
   &::-webkit-scrollbar-thumb {
     background: #666;
   }
+
+  .user:first-child,
+  .user.first-row-div {
+    .tooltiptext {
+      top: auto;
+      bottom: -40px;
+    }
+  }
 }
 
 .user {
@@ -311,6 +327,7 @@ input#searchtext {
   vertical-align: middle;
   color: white;
   padding: 0 8px;
+  box-sizing: border-box;
   line-height: 1.5;
   width: 100%;
   cursor: pointer;
@@ -347,6 +364,11 @@ input#searchtext {
   text-align: right;
   vertical-align: middle;
   width: 180px;
+  max-width: 180px;
+
+  .area {
+    white-space: nowrap;
+  }
 }
 
 .online {
@@ -397,4 +419,36 @@ input#searchtext {
     top: 6px;
     right: 18px;
   }
+}
+
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  position: absolute;
+  top: -25px;
+  right: 0;
+  width: auto;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px;
+  border-radius: 6px;
+  max-width: 300px;
+  white-space: normal;
+
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
 }
