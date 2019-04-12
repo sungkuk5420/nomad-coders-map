@@ -1,3 +1,4 @@
+import spotImage from '/images/spot_black.png';
 mapboxgl.accessToken = 'pk.eyJ1Ijoic3VuZ2t1a2tpbSIsImEiOiJjamR3ZTM1OTUwNXY0MnFtb2E0OG04c2lpIn0.nNFmA7VqzxH3lTST9fiK4g';
 
 var map = new mapboxgl.Map({
@@ -335,7 +336,8 @@ window.features = [{
     }
 ];
 map.on('load', function () {
-    map.loadImage('https://cdn1.iconfinder.com/data/icons/clean-simple/75/iconlocation-12-512.png', function (error, image) {
+    map.loadImage(spotImage, function (error, image) {
+        // map.loadImage('https://cdn1.iconfinder.com/data/icons/clean-simple/75/iconlocation-12-512.png', function (error, image) {
         //   map.loadImage('https://cdn4.iconfinder.com/data/icons/superuser-web-kit/512/674020-point-of-interest_interest_point_venue_spot_place_location_site-512.png', function(error, image) {
         if (error) throw error;
         map.addImage('cat', image);
@@ -361,7 +363,7 @@ map.on('load', function () {
                 "icon-ignore-placement": true,
                 "text-size": 16,
                 "icon-image": "cat",
-                "icon-size": 0.08
+                "icon-size": 0.8
             }
         });
     });
