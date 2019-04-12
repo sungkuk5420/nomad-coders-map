@@ -27,7 +27,7 @@
     "prettier": "^1.15.3"
   },
   "scripts": {
-    "start": "parcel index.html",
-    "build": "parcel build index.html -d build --public-url ./"
+    "start": "parcel originalIndex.html",
+    "build": "parcel build originalIndex.html -d build --public-url ./"
   }
 }
