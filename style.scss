@@ -287,7 +287,6 @@ input#searchtext {
 #searchtext::-webkit-input-placeholder {
   color: rgba(255, 255, 255, 0.25);
 }
-
 #userlist {
   position: fixed;
   overflow-x: hidden;
@@ -451,4 +450,22 @@ input#searchtext {
 /* Show the tooltip text when you mouse over the tooltip container */
 .tooltip:hover .tooltiptext {
   visibility: visible;
+}
+
+@media only screen and (max-width: 600px) {
+  #search {
+    position:fixed;
+    top: auto;
+    width:calc(100% - 10px);
+    left:5px;
+    bottom: calc(30% + 10px);
+  }
+  #userlist {
+    position:fixed;
+    width:calc(100% - 10px);
+    left:5px;
+    height: 30%;
+    top: auto;
+    bottom: 5px;
+  }
 }
