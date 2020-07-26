@@ -2,7 +2,7 @@
     "modules":false,
     "plugins":{
         "autoprefixer":{
-            "browsers":[
+            "overrideBrowserslist":[
                 "Last 2 versions",
                 "IE 11"
             ]

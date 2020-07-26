@@ -22,6 +22,7 @@
     "postcss-modules": "^1.4.1"
   },
   "devDependencies": {
+    "autoprefixer": "^9.8.5",
     "babel-core": "^6.26.3",
     "custom-properties": "^1.0.1",
     "prettier": "^1.15.3"
