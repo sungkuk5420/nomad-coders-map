@@ -1,25 +1,30 @@
-# 노마드 코더들은 어디에 사는가
+# Nomad Coders Map 노마드 코더들은 어디에 사는가
 노마드 코더의 해외 근무자들의 위치를 지도로 표시하였습니다.
 
-## 데모 사이트
+ノマド·コーダの海外勤務者の位置を地図で表示しました。
 
-https://sungkuk5420.github.io/nomad-coders-map/
+## Demo / 데모 / デモサイト
 
-## Git Clone
+[Link Open](https://sungkuk5420.github.io/nomad-coders-map/)
 
-```git clone https://github.com/sungkuk5420/nomad-coders-map.git```
+## Getting Started / 어떻게 시작하나요? / 始め方
 
-## NPM Install
+### Installing / 설치 / インストール
 
-```npm install```
+```
+npm install
+```
 
-## Start
+### Run / 실행 / 実行
 
-```npm start```
+```
+npm start
+```
 
-## Build
+## License / 라이센스 /ライセンス
 
-```npm run-script build```
+This project is licensed under the MIT License - see the [LICENSE.md](https://gist.github.com/PurpleBooth/LICENSE.md) file for details
+이 프로젝트는 MIT 라이센스로 라이센스가 부여되어 있습니다. 자세한 내용은 LICENSE.md 파일을 참고하세요.
 
 ## 기능
 * 사용자 검색기능
